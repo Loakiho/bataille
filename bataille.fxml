@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.zo.bataille.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="406.0" prefWidth="665.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Button fx:id="makabtn" alignment="CENTER" layoutX="266.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#milalao" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Maka">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Label alignment="CENTER" layoutX="260.0" layoutY="14.0" text="OPPONENT" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="ianao" alignment="CENTER" layoutX="302.0" layoutY="292.0" text="Ianao">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <ImageView fx:id="decks" fitHeight="86.0" fitWidth="62.0" layoutX="553.0" layoutY="134.0" onMouseClicked="#HowManyCards" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../red_back.png" />
+               </image>
+            </ImageView>
+            <SplitPane dividerPositions="0.5033783783783784" layoutX="108.0" layoutY="50.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="423.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="379.0">
+                     <children>
+                        <ImageView fx:id="T10" fitHeight="86.0" fitWidth="56.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T4" fitHeight="86.0" fitWidth="56.0" layoutX="242.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T8" fitHeight="86.0" fitWidth="56.0" layoutX="12.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T2" fitHeight="86.0" fitWidth="56.0" layoutX="161.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T6" fitHeight="86.0" fitWidth="56.0" layoutX="326.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ImageView fx:id="T9" fitHeight="86.0" fitWidth="56.0" layoutX="87.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T7" fitHeight="86.0" fitWidth="56.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T1" fitHeight="86.0" fitWidth="56.0" layoutX="164.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T3" fitHeight="86.0" fitWidth="56.0" layoutX="239.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="T5" fitHeight="86.0" fitWidth="56.0" layoutX="328.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Label layoutX="14.0" layoutY="84.0" text="Opponent card" />
+            <Label layoutX="30.0" layoutY="220.0" text="Your card" />
+            <Label fx:id="karatrany" layoutX="55.0" layoutY="116.0" style="-fx-text-fill: red;" text="0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="karatrao" layoutX="55.0" layoutY="247.0" style="-fx-text-fill: blue;" text="0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="Valiny" layoutX="90.0" layoutY="335.0" text="Valiny" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
